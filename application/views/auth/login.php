@@ -14,9 +14,12 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
                                 </div>
+
+                                <?= $this->session->flashdata('message'); ?>
+
                                 <form class="user">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter Email Address...">
+                                        <input type="text" class="form-control form-control-user" id="email" name="email" aria-describedby="emailHelp" placeholder="Email Address">
                                     </div>
                                     <div class="form-group">
                                         <input type="password" class="form-control form-control-user" id="password" name="password" placeholder="Password">
