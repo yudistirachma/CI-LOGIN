@@ -4,3 +4,12 @@ eidt pesan form_error 24:00
 
 vidio #4
 password_verify() 24:58
+
+vidio #5
+ucwords() | is functiion for change first caracter word to uppercase
+{} | using for  showing array variable have ' in string  
+
+vidio #6
+-
+
+vidio #7
