@@ -19,7 +19,7 @@
 
                                 <form class="user" autocomplete="off" method="POST" action="<?= base_url('auth') ?>">
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" id="email" value="<?= set_value('email'); ?>" name="email" aria-describedby="emailHelp" placeholder="Email Address">
+                                        <input type="text" class="form-control form-control-user" id="email" value="<?= set_value('email'); ?>" name="email" aria-describedby="emailHelp" autofocus placeholder="Email Address">
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>');  ?>
                                     </div>
                                     <div class="form-group">
