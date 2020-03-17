@@ -6,7 +6,11 @@
 
     <div class="row">
         <div class="col-mm-8">
-            <?= form_error('menu', '<div class="alert alert-danger" role="alert">', '</div>');  ?>
+            <?php if (validation_errors()) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= validation_errors(); ?>
+                </div>
+            <?php endif; ?>
             <?= $this->session->flashdata('message'); ?>
             <a href="" class="btn btn-primary mb-4" data-toggle="modal" data-target="#newSubMenuModal">Add New Sub Menu</a>
             <table class="table">
@@ -66,16 +70,24 @@
                         <input type="text" id="title" name="title" class="form-control" id="formGroupExampleInput" placeholder="title" autofocus>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="menu" name="menu" class="form-control" id="formGroupExampleInput" placeholder="Menu name">
+                        <select name="menu_id" id="menu_id" class="form-control">
+                            <option value="">Select menu</option>
+                            <?php foreach ($menuSub as $m) : ?>
+                                <option value="<?= $m['id']; ?>"><?php echo $m['menu']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="url" name="url" class="form-control" id="formGroupExampleInput" placeholder="Menu url">
+                        <input type="text" id="url" name="url" class="form-control" id="formGroupExampleInput" placeholder="subMenu url">
                     </div>
                     <div class="form-group">
-                        <input type="text" id="icon" name="icon" class="form-control" id="formGroupExampleInput" placeholder="Menu icon">
+                        <input type="text" id="icon" name="icon" class="form-control" id="formGroupExampleInput" placeholder="subMenu icon">
                     </div>
-                    <div class="form-group">
-                        <input type="text" id="is_active" name="is_active" class="form-control" id="formGroupExampleInput" placeholder="Is active">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" name="is_active" id="is_active" checked>
+                        <label class="form-check-label" for="is_active">
+                            Active ?
+                        </label>
                     </div>
                 </div>
                 <div class="modal-footer">

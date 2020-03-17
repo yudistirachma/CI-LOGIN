@@ -10,7 +10,7 @@
     </a>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+    <hr class="sidebar-divider mb-1">
 
     <!-- query menu -->
     <?php
@@ -46,13 +46,13 @@
                 <?php else : ?>
                 <li class="nav-item">
                 <?php endif; ?>
-                <a class="nav-link" href="<?= base_url($sm['url']) ?>">
+                <a class="nav-link pb-0" href="<?= base_url($sm['url']) ?>">
                     <i class="<?= $sm['icon'] ?>"></i>
                     <span><?php echo ucwords($sm['title']); ?></span></a>
                 </li>
             <?php endforeach; ?>
             <!-- Divider -->
-            <hr class="sidebar-divider">
+            <hr class="sidebar-divider mt-2 mb-1">
         <?php endforeach; ?>
 
         <li class="nav-item">

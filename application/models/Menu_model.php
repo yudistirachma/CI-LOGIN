@@ -11,4 +11,11 @@ class Menu_model extends CI_Model
                 ";
         return $this->db->query($query)->result_array();
     }
+    public function selectMenu()
+    {
+        $query = "SELECT *
+               FROM user_menu
+        ";
+        return $this->db->query($query)->result_array();
+    }
 }
