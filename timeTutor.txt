@@ -27,5 +27,10 @@ file upload 26:56
 delet old file update 33:00
 
 vidio #11
+gmail account setting 02:00
+setting email controller config  06:00
+token generate random_byte()  14:00
+urlencode() 21:20
+
 
 
