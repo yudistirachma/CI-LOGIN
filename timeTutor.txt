@@ -27,10 +27,18 @@ file upload 26:56
 delet old file update 33:00
 
 vidio #11
+
+vidio #12
 gmail account setting 02:00
 setting email controller config  06:00
 token generate random_byte()  14:00
 urlencode() 21:20
+
+viio 13
+base64_encode(random_bytes(32)); 02:15
+urlencode(); 03:10
+
+
 
 
 
