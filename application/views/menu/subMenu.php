@@ -34,7 +34,13 @@
                             <td><?= $sm['menu']; ?></td>
                             <td><?= $sm['url']; ?></td>
                             <td><?= $sm['icon']; ?></td>
-                            <td><?= $sm['is_active']; ?></td>
+                            <td><?php
+                                if ($sm['is_active'] == 1) {
+                                    echo 'Yes';
+                                } else {
+                                    echo 'No';
+                                }
+                                ?></td>
                             <td>
                                 <a href=""><span class="badge badge-warning">edit</span></a>
                                 <a href=""><span class="badge badge-danger">delete</span></a>

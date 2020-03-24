@@ -51,12 +51,17 @@ class Menu extends CI_Controller
             $this->load->view('menu/subMenu');
             $this->load->view('templates/footer');
         } else {
+            if ($this->input->post('is_active')) {
+                $is_active = $this->input->post('is_acive');
+            } else {
+                $is_active = 0;
+            }
             $data = [
                 'title' => $this->input->post('title'),
                 'menu_id' => $this->input->post('menu_id'),
                 'url' => $this->input->post('url'),
                 'icon' => $this->input->post('icon'),
-                'is_active' => $this->input->post('is_active')
+                'is_active' => $is_active
 
             ];
             $this->db->insert('user_sub_menu', $data);
